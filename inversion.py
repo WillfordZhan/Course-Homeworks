@@ -1,17 +1,14 @@
 def inversion(n):
     if len(n) == 1:
-        return n
-    elif len(n) == 2:
-        if n[0] > n[1]:
-            n[0],n[1] = n[1],n[0]
-        return n
+        counter = 0
+        return n, counter
     else:
         mid = len(n) // 2
-        al = inversion(n[:mid])
-        ar = inversion(n[mid:])
+        al, counterl = inversion(n[:mid]) # can assign all the return values to multiple variables
+        ar, counterr = inversion(n[mid:])
+        counter = counterl + counterr
         indexL = 0
         indexR = 0
-        counter = 0
         sortedList = []
         while indexL <= len(al) - 1 and indexR <= len(ar) - 1:
             if al[indexL] > ar[indexR]:
@@ -28,7 +25,7 @@ def inversion(n):
         while indexR <= len(ar) - 1:
             sortedList.append(ar[indexR])
             indexR += 1
-        return sortedList
-    
+        return sortedList, counter
+
 a = [5,4,1,3,9]
 print(inversion(a))
