@@ -4,7 +4,8 @@ def inversion(n):
         return n, counter
     else:
         mid = len(n) // 2
-        al, counterl = inversion(n[:mid]) # can assign all the return values to multiple variables
+        # can assign all the return values to multiple variables
+        al, counterl = inversion(n[:mid])
         ar, counterr = inversion(n[mid:])
         counter = counterl + counterr
         indexL = 0
@@ -27,5 +28,6 @@ def inversion(n):
             indexR += 1
         return sortedList, counter
 
-a = [5,4,1,3,9]
+
+a = [5, 4, 1, 3, 9]
 print(inversion(a))
