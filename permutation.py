@@ -1,7 +1,7 @@
 def permutation_r(n):
     head = n[len(n) - 1]
     '''
-	n.pop(-1)
+	n.pop(-1)  ??
 	'''
     if (len(n) <= 1):
         sequence1 = []
@@ -10,7 +10,7 @@ def permutation_r(n):
     else:
         sequence = permutation_r(n[:-1])
         '''
-	    sequence = permutation_r(n)
+	    sequence = permutation_r(n)  ??
 		'''
         baseStr = sequence[0]
         baseStrNum = len(sequence)
