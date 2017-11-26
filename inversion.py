@@ -30,4 +30,4 @@ def inversion(n):
 
 
 a = [5, 4, 1, 3, 9]
-print(inversion(a))
+print("The inversion of the input is: ", inversion(a)[1])
