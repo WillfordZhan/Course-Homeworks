@@ -29,5 +29,5 @@ def inversion(n):
         return sortedList, counter
 
 
-a = [5, 4, 1, 3, 9]
-print("The inversion of the input is: ", inversion(a)[1])
+a = [5, 4, 1, 3, 9, 2, 8]
+print("The inversion of the input is: ", inversion(a)[1],inversion(a)[0])
