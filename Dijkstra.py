@@ -38,7 +38,7 @@ def minValue(a):  # find the min in a dic's values
         if a[k] <= minv:
             minv = a[k]
             minp = k
-    return k
+    return minp
 
 
 a = {
