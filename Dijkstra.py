@@ -1,14 +1,14 @@
 # Dijkstra algorithm
-def dijkstra(n, u): # n is the graph, u is the origin npde
+def dijkstra(n, u):  # n is the graph, u is the origin npde
     # bigV is the set of nodes
-    bigV = list(n.keys()) 
+    bigV = list(n.keys())
     # cV is the current choices
-    cV = {} 
+    cV = {}
     for a in bigV:
         cV[a] = float('inf')
     cV[u] = 0
     bigS = {u: 0}
-    while bigV != None:
+    while len(bigV) != 1:
         i = n[u]
         for dic in i:
             ep = list(dic.keys())[0]
@@ -49,4 +49,6 @@ a = {
     'p': [{'q': 4}, {'s': 7}]
 }
 originNode = 't'
-print(dijkstra(a,originNode))
+print('The shortest path from \'' + originNode + '\' to other nodes are : ')
+print(dijkstra(a, originNode))
+
